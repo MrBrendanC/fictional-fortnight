@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+	<name>Beverly Hills Hotel</name>
+
+	<description>
+	  Test App for Beverly Hills Hotel in Umhlanga
+	</description>
+
+	<author href="http://www.bookbeds.net" email="info@bookbeds.net">
+	  Brendan Cornelius
+	</author>
+  
+<!--
+	If you do not want any permissions to be added to your app, add the
+	following tag to your config.xml; you will still have the INTERNET
+	permission on your app, which PhoneGap requires.
+-->
+	<preference name="permissions" value="none"/>
+	
+<!-- Define app icon for each platform. -->
+	<icon src="icon.png" />
+	
+<!-- Define app splash screen for each platform. -->
+	<gap:splash src="splash.png" />
+
+</widget>
