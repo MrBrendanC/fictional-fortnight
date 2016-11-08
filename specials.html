@@ -8,6 +8,19 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="css/main.css">
+	<script>
+		/*Using Jquery Load()*/
+		$('#Load').load('http://m.umhlangabookings/beverly-hills-hotel/dynamic-specials.html');
+
+		/*Using ajax*/
+		$.ajax({
+		  dataType:'html',
+		  url:'http://m.umhlangabookings/beverly-hills-hotel/dynamic-specials.html',
+		  success:function(data) {
+			$('#ajax').html($(data).children());   
+		  }
+		});	
+	</script>
 </head> 
 <body> 
 
@@ -53,6 +66,9 @@
 				<p align="center"><img src="images/poolside.jpg" width="320" height="210" border="0" alt="" /></p>
 				<h3>SPECIALS</h3>
 				<p>R1980 person sharing / per night</p>
+				<div id="Load"></div>
+				<hr/>
+				<div id="ajax"></div>
 				<!-- Extra Page Buttons -->
                 <a data-role="button" data-transition="fade" href="book-now.html">
                     BOOK NOW
