@@ -10,12 +10,12 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script>
 		/*Using Jquery Load()*/
-		$('#Load').load('http://m.umhlangabookings/beverly-hills-hotel/dynamic-specials.html');
+		$('#Load').load('http://m.umhlangabookings.co.za/beverly-hills-hotel/dynamic-specials.html');
 
 		/*Using ajax*/
 		$.ajax({
 		  dataType:'html',
-		  url:'http://m.umhlangabookings/beverly-hills-hotel/dynamic-specials.html',
+		  url:'http://m.umhlangabookings.co.za/beverly-hills-hotel/dynamic-specials.html',
 		  success:function(data) {
 			$('#ajax').html($(data).children());   
 		  }
