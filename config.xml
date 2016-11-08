@@ -33,6 +33,5 @@
 	<!-- Plugins -->
 
 	<!-- Core plugins -->	
-	<plugin name="org.li8.inappbrowser" spec="0.1" source="pgb" />
 
 </widget>
