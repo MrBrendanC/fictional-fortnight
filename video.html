@@ -12,20 +12,48 @@
 <body> 
 
         <!-- Home -->
-        <div data-role="page" id="home">
+        <div data-role="page" id="video">
+            <!-- /panel -->
+			<div data-role="panel" id="menu-panel">
+                <a data-role="button" data-transition="flip" rel="external" href="index.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-home" aria-hidden="true"></i> HOME
+                </a>			
+                <a data-role="button" data-transition="flip" rel="external" href="std-sea-facing-room.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-bed"></i> SEA FACING ROOM
+                </a>
+                <a data-role="button" data-transition="flip" rel="external" href="cabanas.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-bed"></i> CABANA 1
+                </a>				
+				<a data-role="button" data-transition="flip" rel="external" href="specials.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-star"></i> SPECIALS
+                </a>
+				<a data-role="button" data-transition="flip" rel="external" href="video.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i> WATCH VIDEO
+                </a>
+				<a data-role="button" data-transition="flip" rel="external" href="restaurants.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-cutlery" aria-hidden="true"></i> RESTAURANTS
+                </a>
+				<a data-role="button" data-transition="flip" rel="external" href="reviews.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i> REVIEWS
+                </a>				
+				<a data-role="button" data-rel="close" href="#<?php print $currentID; ?>" >
+                    <i class="fa fa-times" aria-hidden="true"></i> CLOSE
+                </a>				
+			</div>
+			<!-- /panel -->		
 			<div data-theme="a" data-role="header">
                 <div class="mainbody">
                     <div align="center"><a href="index.html"><img class="logo" src="images/logo.png" /></a></div>
                 </div>
+				<a href="#menu-panel" data-icon="bars" data-iconpos="notext">Menu</a>
             </div>
             <!-- Start Body -->
 			<div data-role="content" class="landingPage">
-			
-				<p align="center"><img src="images/std-room.jpg" width="320" height="210" border="0" alt="" /></p>
 				<h3>VIDEO</h3>
+				<iframe width="340" height="191" src="https://www.youtube.com/embed/01WrtSn74Po?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				<p></p>
 				<!-- Extra Page Buttons -->
-                <a data-role="button" data-transition="fade" href="book-now.html">
+                <a data-role="button" data-transition="fade" rel="external" href="book-now.html">
                     BOOK NOW
                 </a>
 				<a data-role="button" href="tel:+27315368151" rel="external" >

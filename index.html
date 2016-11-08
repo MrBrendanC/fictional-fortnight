@@ -13,6 +13,19 @@
 
         <!-- Home -->
         <div data-role="page" id="home">
+            <!-- /panel -->
+			<div data-role="panel" id="more-panel">
+				<a data-role="button" data-transition="flip" rel="external" href="restaurants.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-cutlery" aria-hidden="true"></i> RESTAURANTS
+                </a>
+				<a data-role="button" data-transition="flip" rel="external" href="reviews.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i> REVIEWS
+                </a>
+				<a data-role="button" data-rel="close" href="#home" >
+                    <i class="fa fa-times" aria-hidden="true"></i> CLOSE
+                </a>
+			</div>
+			<!-- /panel -->		
 			<div data-theme="a" data-role="header">
                 <div class="mainbody">
                     <div align="center"><a href="index.html"><img class="logo" src="images/logo.png" /></a></div>
@@ -21,14 +34,47 @@
             <!-- Start Body -->
 			<div data-role="content" class="landingPage">
 			
-				<a data-role="button" data-transition="flip" href="std-sea-facing-room.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+				<!-- start Basic Jquery Slider -->
+				<div id="banner-fade">
+				<ul class="bjqs">
+				  <li><img src="images/main1-360x.jpg" title="Stunning Sea View Rooms"></li>
+				  <li><img src="images/main2-360x.jpg" title="On Umhlanga Beach"></li>
+				  <li><img src="images/main3-360x.jpg" title="Situated on the Beach"></li>
+				  <li><img src="images/poolside.jpg" title="Sheer Luxury Holiday"></li>
+				  <li><img src="images/dining.jpg" title="Fine Dining"></li>
+				  </ul>
+				</div>
+
+				<script class="secret-source">
+					jQuery(document).ready(function($) {
+
+					$('#banner-fade').bjqs({
+					height      : 240,
+					width       : 340,
+					animduration : 450, // how fast the animation are
+					animspeed : 4000, // the delay between each slide
+					automatic : true, // automatic
+					keyboardnav : true, // enable keyboard navigation
+					showmarkers : false,
+					showcontrols : true, // show next and prev controls
+					nexttext : '<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>',
+					prevtext : '<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>',
+					animtype : 'slide',
+					responsive : true
+					});
+
+					});
+				</script>
+				<!-- end Basic jQuery Slider -->			
+			
+				<a data-role="button" data-transition="flip" rel="external" href="std-sea-facing-room.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
 					<i class="fa fa-bed"></i> SEA FACING ROOM
 				</a>
-				<a data-role="button" data-transition="flip" href="#cabanas.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+				<a data-role="button" data-transition="flip" rel="external" href="cabanas.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
 					<i class="fa fa-bed"></i> CABANA
 				</a>
 				<div class="ui-block-a">
-				<a data-role="button" data-transition="flip" href="specials.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+				<a data-role="button" data-transition="flip" rel="external" href="specials.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
 					<i class="fa fa-star"></i> SPECIALS
 				</a>
 				</div>
@@ -38,10 +84,10 @@
 				</a>
 				</div>
 				<div class="clear"></div>
-				<a data-role="button" data-transition="flip" href="video.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
+				<a data-role="button" data-transition="flip" rel="external" href="video.html" style="background:#697e83; color:#FFFFFF; text-shadow:none; font-weight:500;">
 					<i class="fa fa-video-camera" aria-hidden="true"></i> WATCH VIDEO
 				</a>
-				<a data-role="button" data-transition="flip" href="book-now.html" style="background:#7db4b9; color:#ffcc00; text-shadow:none; font-weight:500;">
+				<a data-role="button" data-transition="flip" rel="external" href="book-now.html" style="background:#7db4b9; color:#ffcc00; text-shadow:none; font-weight:500;">
 					<i class="fa fa-plane"></i> BOOK NOW
 				</a>
 				<a data-role="button" href="tel:+27315368151" rel="external" style="background:#7db4b9; color:#ffcc00; text-shadow:none; font-weight:500;">
@@ -66,5 +112,8 @@
 			
 			<!-- LOAD RENDER-BLOCKING JAVASCRIPT -->
 			<link rel="stylesheet" href="css/font-awesome.min.css" />
+			<!--jquery basic slider-->
+			<script src="js/bjqs-1.3.min.js" defer></script>
+			<link type="text/css" rel="stylesheet" href="css/bjqs.css" />			
 </body>
 </html>
